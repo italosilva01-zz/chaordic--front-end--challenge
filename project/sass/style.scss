@@ -1,5 +1,8 @@
-@import 'mq';
+@import 'mq';//import manager of breakpoints Sass-MQ
 
+//general
+
+//colors that i will used
 $textoApoio :#777;
 $vermelhorCha:#aa1423;
 $texto:#eee;
@@ -10,6 +13,7 @@ sans-serif;
 $fontRobotoSlab:'Roboto Slab',
 serif;
 
+//standard body configuration
 body {
     text-align: center;
     font-family: $fontRoboto !important;
@@ -17,13 +21,24 @@ body {
 
 
 }
-
-//CABECALHO
+//container class
+.container{
+    @include mq($from:desktop){
+        margin-left: auto;
+        margin-right: auto;
+    }    
+}
+//header settings
 header {
     position: relative;
     margin-top: 5%;
     display: flex;
     justify-content: space-around;
+
+    //header desktop version
+    @include mq($from:desktop){
+        margin-top: 1%;
+    }
 
     h1 {
         a {
@@ -39,17 +54,40 @@ header {
     font-weight: 600;
     font-size: 25px;
     color: $texto;
+    
+    @include mq($from:desktop){
+        font-size: 45px;
+        margin-bottom: 2%;
+    }
 }
 
 main {
+    //background image settings
     background-image: url('/Assets/background-home.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     height: auto;
-
-
-
+    color: white;
+    p{
+        
+        @include mq($until:tablet){
+            display: none;
+        }
+    }
+    
     div {
-        width: 100%;
+        //input of link
+        
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq($from:desktop){
+            display: inline-block;
+            width: 100%;
+        }
 
         #link {
 
@@ -62,9 +100,14 @@ main {
             font-size: 16px;
             text-align: center;
 
+            @include mq($from:desktop){
+                min-width: 800px;
+            }
+           
         }
+        
     }
-
+        
     #button {
         margin-top: 10%;
         margin-bottom: 10%;
@@ -79,6 +122,7 @@ main {
 
     }
 }
+
 
 section {
     margin-top: 15%;

@@ -3,11 +3,23 @@ body {
   font-family: "Roboto", sans-serif !important;
 }
 
+@media (min-width: 61.25em) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 header {
   position: relative;
   margin-top: 5%;
   display: flex;
   justify-content: space-around;
+}
+@media (min-width: 61.25em) {
+  header {
+    margin-top: 1%;
+  }
 }
 header h1 a {
   color: transparent;
@@ -19,14 +31,37 @@ header h1 a {
   font-size: 25px;
   color: #eee;
 }
+@media (min-width: 61.25em) {
+  .titulo {
+    font-size: 45px;
+    margin-bottom: 2%;
+  }
+}
 
 main {
   background-image: url("/Assets/background-home.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   height: auto;
+  color: white;
+}
+@media (max-width: 46.24em) {
+  main p {
+    display: none;
+  }
 }
 main div {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 61.25em) {
+  main div {
+    display: inline-block;
+    width: 100%;
+  }
 }
 main div #link {
   margin-top: 5%;
@@ -37,6 +72,11 @@ main div #link {
   color: #ff6e14;
   font-size: 16px;
   text-align: center;
+}
+@media (min-width: 61.25em) {
+  main div #link {
+    min-width: 800px;
+  }
 }
 main #button {
   margin-top: 10%;
@@ -119,4 +159,4 @@ footer {
   display: flex;
 }
 
-/*# sourceMappingURL=estilo.css.map */
+/*# sourceMappingURL=style.css.map */

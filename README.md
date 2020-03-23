@@ -6,8 +6,7 @@ challenge front-end taken from felipefialho/frontend-challenges
 This project is one shorten of link. Done with HTML; CSS3; SASS and Javascript ES6.
 
 ### Sorry
-I'm making a request to a random json because I just wanted to show that I know how to make requests. ;(
-
+Due to lack of knowledge, I did some mergers that probably broke the repository. I'll still fix it
 ## In progress
 
 I will make o layout desktop and the shorten of link with js
